@@ -51,8 +51,10 @@ class Toolbar {
       });
       game.setFastRunMode(true);
       var code = editor.getValue();
-      eval(code);
-      game.world.resume();
+      setTimeout(function() {
+        eval(code);
+        game.world.resume();
+      }, 0);
     }
 
     btnPauseResume.onclick = function() {
