@@ -27,15 +27,15 @@
       padding: 5px 0px 5px 0px;
       border-radius: 4px 4px 0px 0px;
       background: rgba(255,255,255,0.8);
-      color: #000;
+      color: #333;
     }
     .toolbar * {
       font-size: 14px;
+      color: #333;
     }
     .toolbar > button {
       height: 100%;
       margin-right: 5px;
-      color: #000;
       display: block;
       float: right;
     }
@@ -116,8 +116,4 @@
     }
     .code-editor-container > .CodeMirror {
       border: 1px solid #ababd8;
-      background: rgba(255,255,255,0.6);
-    }
-    .code-editor-container .CodeMirror-gutters {
-      background: rgba(255,255,255,0.4);
     }
