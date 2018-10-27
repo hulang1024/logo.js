@@ -3,7 +3,7 @@ window.onload = function() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   }
   if (isMobile() && !(window.innerWidth > window.innerHeight)) {
-    alert('检测到您当前使用横屏，为了更好的体验，推荐切换到横屏');
+    alert('检测到您当前使用竖屏，为了更好的体验，请切换到横屏：）');
   }
   window.game = new Game();
   exportMethods(game);
