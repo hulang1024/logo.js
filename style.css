@@ -99,7 +99,7 @@
       position: absolute;
       left: 0px;
       top: 0px;
-      display: block;
+      display: none;
       width: 46px;
       height: 46px;
       background: url(turtle.png);
@@ -111,6 +111,7 @@
       position: relative;
     }
     .code-editor-container > textarea {
+      display: none;
       font-family: monospace;
     }
     .code-editor-container > .CodeMirror {
