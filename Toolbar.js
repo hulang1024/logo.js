@@ -6,6 +6,7 @@ class Toolbar {
     var btnFastRun = document.getElementById('fast-run');
     var btnPauseResume = document.getElementById('resume');
     var btnReset = document.getElementById('reset');
+    var tip = document.getElementById('tip');
 
     this._initExamples();
 
@@ -13,6 +14,8 @@ class Toolbar {
       speedInput.value = game.world.speed;
     });
     game.world.on('end', function() {
+      if (game.isFastRunMode)
+        tip.style.display = 'none';
       [btnRun, btnFastRun].forEach(function(btn) {
         btn.removeAttribute('disabled');
         btn.className = '';
@@ -50,6 +53,7 @@ class Toolbar {
         btn.className = '';
       });
       game.setFastRunMode(true);
+      tip.style.display = 'block';
       var code = editor.getValue();
       setTimeout(function() {
         eval(code);
@@ -93,6 +97,8 @@ class Toolbar {
       select.options.add(opt);
     });
     select.onchange = function() {
+      toolbar.editor.setValue('');
+
       var req = new XMLHttpRequest();
       req.open('GET', this.value + '?_=' + +new Date, true);
       req.addEventListener('load', function(event){
