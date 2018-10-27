@@ -1,0 +1,118 @@
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      background-color: #fff;
+    }
+    body {
+      position: absolute;
+      background: url(bg.jpg) no-repeat;
+    }
+
+    button {
+      border-radius: 4px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    #layout {
+      width: 1026px;
+      margin: 10px auto;
+    }
+
+    .toolbar {
+      width: 1025px;
+      height: 30px;
+      padding: 5px 0px 5px 0px;
+      border-radius: 4px 4px 0px 0px;
+      background: #eee;
+      color: #000;
+    }
+    .toolbar * {
+      font-size: 14px;
+    }
+    .toolbar > button {
+      height: 100%;
+      margin-right: 5px;
+      color: #000;
+      display: block;
+      float: right;
+    }
+    .toolbar > button:hover {
+      font-weight: bold;
+    }
+    .toolbar input {
+      margin-left: 0px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .toolbar #run {
+      background: greenyellow;
+    }
+    .toolbar #fast-run {
+      background: greenyellow;
+    }
+    .toolbar #resume {
+      background: red;
+    }
+    .toolbar #reset {
+      background: orange;
+    }
+    .toolbar .disabled {
+      color: gray !important;
+    }
+
+    .logo-canvas-container {
+      position: relative;
+      float: left;
+      height: 502px;
+      padding: 10px 10px 22px 10px;
+      background: #DCDCDC;
+      border: 1px solid #bfbfbf;
+    }
+    .logo-canvas-container .info {
+      width: 100%;
+      font-size: 14px;
+    }
+    .logo-canvas-container .info-coords {
+      float: left;
+    }
+    .logo-canvas-container .info-angle {
+      float: right;
+    }
+    .logo-canvas {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      border: 1px solid #bfbfbf;
+      background: #fff;
+      overflow: hidden;
+    }
+    .logo-canvas > canvas {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
+    .logo-canvas > #role {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      display: block;
+      width: 46px;
+      height: 46px;
+      background: url(turtle.png);
+      transform: rotate(0deg);
+    }
+
+    .code-editor-container {
+      float: left;
+      position: relative;
+    }
+    .code-editor-container > textarea {
+      font-family: monospace;
+    }
+    .code-editor-container > .CodeMirror {
+      border: 1px solid #ababd8;
+    }
