@@ -27,6 +27,7 @@ class Toolbar {
     }
 
     btnRun.onclick = function() {
+      tip.style.display = 'none';
       [btnRun, btnFastRun].forEach(function(btn) {
         btn.setAttribute('disabled', true);
         btn.className = 'disabled';
@@ -73,6 +74,8 @@ class Toolbar {
 
     btnReset.onclick = function() {
       game.world.reset();
+
+      tip.style.display = 'none';
       [btnRun, btnFastRun].forEach(function(btn) {
         btn.removeAttribute('disabled');
         btn.className = '';
@@ -81,7 +84,6 @@ class Toolbar {
         btn.setAttribute('disabled', true);
         btn.className = 'disabled';
       });
-
       btnPauseResume.innerText = '暂停';
     }
   }
