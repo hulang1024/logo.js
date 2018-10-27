@@ -8,6 +8,7 @@
     body {
       position: absolute;
       background: url(bg.jpg) no-repeat;
+      background-size: cover;
     }
 
     button {
